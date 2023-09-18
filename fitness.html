@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        body{ 
+            
+            background-size: 100%;
+            /* background: scroll; */
+            
+
+        }
+        #img{
+            border: solid black;
+            height: 500px;
+            width: 1000px;
+            background-image: url(bmi\ img.jpg);
+            background-size:cover ;
+        }
+    </style>
+<head>
+    <title>Fitness Calculator</title>
+</head>
+<body>
+    <h1>Fitness Calculator</h1>
+    <div id="img">
+        <!-- image -->
+    </div>
+    <form class="bmiForm">
+        <label for="weight">Weight (in kg):</label><br>
+        <input type="number" id="weight" name="weight"><br>
+        <label for="height">Height (in cm):</label><br>
+        <input type="number" id="height" name="height"><br>
+        <input type="button" value="Calculate BMI" onclick="calculateBMI()">
+    </form>
+    <p id="result"></p>
+
+    <script>
+        function calculateBMI() {
+            var weight = document.getElementById('weight').value;
+            var height = document.getElementById('height').value;
+            height /= 100; // convert cm to m
+            var bmi = weight / (height * height);
+            document.getElementById('result').innerHTML = 'Your BMI is ' + bmi.toFixed(2);
+        }
+    </script>
+</body>
+</html>
