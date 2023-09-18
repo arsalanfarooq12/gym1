@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Valley Fitness club</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+</head>
+
+<link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="pngtree-gym-logo-png-image_1824195.jpg">
+<style>
+    /* CSS Reset */
+    body {
+        /* font-family: 'Cedarville Cursive', cursive; */
+        font-family: 'Palanquin Dark', sans-serif;
+        color: white;
+        margin: 0px;
+        padding: 0px;
+        background: url('gymwallpap.jpeg');
+        background-size: cover;
+        background-attachment:scroll;
+           
+    }
+
+    .left {
+        display: inline-block;
+        border: 2px;
+        position: absolute;
+        left: 60px;
+        top: 20px;
+        /* font-family: 'Cedarville Cursive',' cursive'; */
+
+    }
+
+    .left img {
+        width: 136px;
+        border-radius: 2cm;
+        filter: invert(90%);
+        
+
+    }
+
+    .left div {
+        line-height: 19px;
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .mid {
+        display: block;
+        width: 50%;
+        margin: 40px auto;
+        border: 2px ;
+    }
+
+    .right {
+        position: absolute;
+        right: 34px;
+        top: 43px;
+        display: inline-block;
+        /* border: 2px solid yellow; */
+        border: 2px;
+    }
+
+    .navbar {
+        display: block;
+    }
+
+    .navbar li {
+        display: inline-block;
+        font-size: 20px;
+    }
+
+    .navbar li a {
+        color:black;
+        text-decoration: none;
+        padding: 30px 10px;
+        
+
+    }
+
+    .navbar li a:hover
+     {
+        text-decoration: underline;
+        color:gold;
+        font-size: 21px;
+
+
+    }
+
+    .btn {
+        font-family: 'Baloo Bhai', cursive;
+        font-family: 'Palanquin Dark', sans-serif;
+        margin: 0px 9px;
+        background-color: black;
+        color: white;
+        padding: 4px 14px;
+        border: 2px solid grey;
+        border-radius: 10px;
+        font-size: 10px;
+        cursor: pointer;
+    }
+
+    .btn:hover {
+        background-color: rgb(191, 201, 42);
+        color: #000;
+    }
+
+    .container {
+        float: left;
+        float: bottom;
+        border: 2px solid white;
+        margin: 106px 80px;
+        padding: 75px;
+        width: 40%;
+        border-radius: 28px;
+
+    }
+.d{
+    color: #000;
+}
+.d:hover{
+    color: chartreuse;
+}
+    .form-group input {
+        font-family: 'Baloo Bhai', cursive;
+        font-family: 'Palanquin Dark', sans-serif;
+        text-align: center;
+        display: block;
+        width: 508px;
+        padding: 1px;
+        border: 2px solid black;
+        margin: 11px auto;
+        font-size: 25px;
+        border-radius: 8px;
+    }
+
+    .container h1 {
+        text-align: center;
+        font-size: 26px;
+        font-family: 'Cedarville Cursive', cursive;
+        color: #000;
+    }
+
+    .container button {
+        display: block;
+        width: 74%;
+        margin: 20px auto;
+    }
+    #sub:hover{
+        
+        font-size: 12px;
+
+    }
+    .gender{
+        color: #000;
+    }
+</style>
+
+<body>
+    <header class="header">
+        <!-- Left box for logo -->
+        <div class="left">
+            <img src="pngtree-gym-logo-png-image_1824195.jpg" alt="">
+            <div> Valley Fitness Club </div>
+        </div>
+        <!-- Mid box for navbar -->
+        <div class="mid">
+            <ul class="navbar">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="about us for gym site.html">About Us</a></li>
+                <li><a href="#">Fitness Calculator</a></li>
+                <li><a href="#">Our Gym</a></li>
+            </ul>
+        </div>
+
+        <!-- Right box for buttons -->
+        <div class="right">
+            <button class="btn">Call Us Now</button>
+            <button class="btn">Support</button>
+        </div>
+    </header>
+    <div class="container">
+        <h1>Join the Best Fitness center  of Valley </h1>
+        <form action="noaction.php">
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Name">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" name="" placeholder="Enter your Email Id">
+                <div class="d">Enter Your DOB</div>
+                <div class="form-group">
+                    <input type="date" name="" placeholder="Enter your Age">
+                </div>
+            </div>
+            <div class="gender">
+                Gender: male <input type="radio" name="my gender"> female <input type="radio" name="my gender">
+            </div>
+            <button class="btn" id="sub">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
