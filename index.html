@@ -16,6 +16,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="pngtree-gym-logo-png-image_1824195.jpg">
+<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <style>
     /* CSS Reset */
     body {
@@ -24,14 +25,18 @@
         color: white;
         margin: 0px;
         padding: 0px;
-        background: url('gymwallpap.jpeg');
+        background: url('gym bg.webp');
         background-size: cover;
         background-attachment:scroll;
            
     }
+    body img{
+        max-width: 100%;
+    }
 
     .left {
-        display: inline-block;
+        
+        display: block;
         border: 2px;
         position: absolute;
         left: 60px;
@@ -54,25 +59,43 @@
         text-align: center;
     }
 
-    .mid {
-        display: block;
+    .navbar  {
+        display: flex;
         width: 50%;
         margin: 40px auto;
         border: 2px ;
+        /* border: solid red; */
     }
 
     .right {
+        
         position: absolute;
         right: 34px;
         top: 43px;
         display: inline-block;
-        /* border: 2px solid yellow; */
+        border: 2px solid yellow;
         border: 2px;
+        
+    }
+    /* below code will triger only in small display */
+    @media screen and (max-width : 400px) {
+        .right{
+             margin-top: 1000px;
+        }
+
+        .container{
+            
+            border: none  ;
+        }
+        .navbar{
+            width: 400px;
+            margin-left: 200px;
+            padding-right: 20px;
+            
+        }
     }
 
-    .navbar {
-        display: block;
-    }
+    
 
     .navbar li {
         display: inline-block;
@@ -80,7 +103,7 @@
     }
 
     .navbar li a {
-        color:black;
+        color:bisque;
         text-decoration: none;
         padding: 30px 10px;
         
@@ -117,7 +140,7 @@
     .container {
         float: left;
         float: bottom;
-        border: 2px solid white;
+        /* border: 2px solid white; */
         margin: 106px 80px;
         padding: 75px;
         width: 40%;
@@ -175,7 +198,7 @@
         <!-- Mid box for navbar -->
         <div class="mid">
             <ul class="navbar">
-                <li><a href="#" class="active">Home</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about us for gym site.html">About Us</a></li>
                 <li><a href="fitness.html">Fitness Calculator</a></li>
                 <li><a href="ourgym.html">Our Gym</a></li>
@@ -184,7 +207,7 @@
 
         <!-- Right box for buttons -->
         <div class="right">
-            <button class="btn">Call Us Now</button>
+            <button class="btn">Contact</button>
             <button class="btn">Support</button>
         </div>
     </header>
