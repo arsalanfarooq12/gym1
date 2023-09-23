@@ -15,23 +15,54 @@
             background-image: url(bmi\ img.jpg);
             background-size:cover ;
         }
+        .bmiForm  .form1{
+            border: solid yellow;
+            background-color: aqua;
+        }
+        label {
+            color: rgb(49, 105, 6);
+        }
+        .btn1{
+            border-radius: 5px;
+            padding: 5px;
+            margin: 10px;
+            background-color: aquamarine;
+        }
+        h1{
+            text-align: center;
+        }
     </style>
 <head>
     <title>Fitness Calculator</title>
 </head>
 <body>
     <h1>Fitness Calculator</h1>
+    
+    <form class="bmiForm">
+        <label for="weight">Weight (in kg):</label><br>
+        <input type="number" id="weight" name="weight" required><br>
+        <label for="height">Height (in cm):</label><br>
+        <input type="number" id="height" name="height" required><br>
+        <input type="button" value="Calculate BMI" onclick="calculateBMI()" class="btn1">
+    </form>
+    <p id="result"></p>
     <div id="img">
         <!-- image -->
     </div>
-    <form class="bmiForm">
-        <label for="weight">Weight (in kg):</label><br>
-        <input type="number" id="weight" name="weight"><br>
-        <label for="height">Height (in cm):</label><br>
-        <input type="number" id="height" name="height"><br>
-        <input type="button" value="Calculate BMI" onclick="calculateBMI()">
+
+
+    <h1>Waist-to-Hip Ratio</h1>
+    <h4>This ratio measures the distribution of fat in your body. It’s calculated by dividing your waist circumference by your hip circumference.</h4>
+   
+    <form id="whrForm" class="form1">
+        <label for="waist">Waist Circumference (in cm): </label><br>
+        <input type="number" id="waist" name="waist"><br>
+        <label for="hip">Hip Circumference (in cm):</label><br>
+        <input type="number" id="hip" name="hip"><br>
+        <input type="button" value="Calculate WHR" onclick="calculateWHR()" class="btn1">
     </form>
-    <p id="result"></p>
+    <p id="result2"></p>
+    <img src="waisthip.png" alt="image loading....">
 
     <script>
         function calculateBMI() {
@@ -40,6 +71,12 @@
             height /= 100; // convert cm to m
             var bmi = weight / (height * height);
             document.getElementById('result').innerHTML = 'Your BMI is ' + bmi.toFixed(2);
+        }
+        function calculateWHR() {
+            var waist = document.getElementById('waist').value;
+            var hip = document.getElementById('hip').value;
+            var whr = waist / hip;
+            document.getElementById('result2').innerHTML = 'Your Waist-to-Hip Ratio is ' + whr.toFixed(2);
         }
     </script>
 </body>
